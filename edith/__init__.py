@@ -27,4 +27,4 @@ def welcome(request, responder):
 
     # Build up the final natural language response and reply to the user.
     responder.reply( prefix + "Hi, How can I help you?" + " \n-----------------------------------------------"
-                            + request + "\n -----------------------------------------------")
+                            + str(request) + "\n -----------------------------------------------")
