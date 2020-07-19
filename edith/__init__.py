@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """This module contains a template MindMeld application"""
-from mindmeld import Application
+from .root import app
 
-app = Application(__name__)
+from . import greeting
+from . import weather
 
 __all__ = ['app']
 
@@ -13,7 +14,7 @@ def default(request, responder):
     responder.reply('Hello there!')
 
 
-@app.handle(intent='greet')
+
 def welcome(request, responder):
     prefix = 'Hello.'
 
